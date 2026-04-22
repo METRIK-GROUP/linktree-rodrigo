@@ -116,15 +116,17 @@ body::before {
 /* ---------- Header ---------- */
 .header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   gap: var(--s-2);
-  text-align: center;
+  width: 100%;
+  padding: 4px 4px;
 }
 
 .avatar {
-  width: 112px;
-  height: 112px;
+  flex-shrink: 0;
+  width: 84px;
+  height: 84px;
   border-radius: 50%;
   overflow: hidden;
   background: var(--c-gray-100);
@@ -139,12 +141,19 @@ body::before {
   display: block;
 }
 
+.header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
 .name {
-  font-size: 1.375rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
   color: var(--c-black);
-  margin-top: var(--s-1);
+  line-height: 1.15;
 }
 
 .handle {
@@ -647,7 +656,7 @@ body::before {
   .banner-logo img { height: 34px; }
   .priority-title { font-size: 1rem; }
   .priority-subtitle { font-size: .78rem; }
-  .avatar { width: 96px; height: 96px; }
+  .avatar { width: 72px; height: 72px; }
   .name { font-size: 1.25rem; }
 }
 
@@ -663,10 +672,12 @@ body::before {
 
   <header class="header">
     <div class="avatar">
-      <img src="images/rodrigo.jpg" alt="Rodrigo Rosar" width="112" height="112" loading="eager" decoding="async" fetchpriority="high">
+      <img src="images/rodrigo.jpg" alt="Rodrigo Rosar" width="84" height="84" loading="eager" decoding="async" fetchpriority="high">
     </div>
-    <h1 class="name">Rodrigo Rosar</h1>
-    <span class="handle">@rodrigorosar</span>
+    <div class="header-text">
+      <h1 class="name">Rodrigo Rosar</h1>
+      <span class="handle">@rodrigorosar</span>
+    </div>
   </header>
 
   <nav class="links" aria-label="Links principais">
