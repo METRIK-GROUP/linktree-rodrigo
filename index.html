@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F5F4F0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0A0A0B" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Rodrigo Rosar — Workshop PDP+IA, Projeto Invisível no YouTube e lista de espera da Implementação PDP.">
+<meta name="robots" content="index,follow">
+
+<title>Rodrigo Rosar · Links</title>
+
+<link rel="canonical" href="https://links.rodrigorosar.com.br/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231E1E1E'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-weight='600' font-size='30' fill='%23F5F4F0'%3ERR%3C/text%3E%3C/svg%3E">
+
+<meta property="og:type" content="profile">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Rodrigo Rosar">
+<meta property="og:title" content="Rodrigo Rosar · Links">
+<meta property="og:description" content="Workshop PDP+IA, Projeto Invisível no YouTube e lista de espera da Implementação PDP.">
+<meta property="og:url" content="https://links.rodrigorosar.com.br/">
+<meta property="og:image" content="https://links.rodrigorosar.com.br/images/rodrigo.jpg">
+<meta property="og:image:alt" content="Rodrigo Rosar">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rodrigo Rosar · Links">
+<meta name="twitter:description" content="Workshop PDP+IA, Projeto Invisível no YouTube e lista de espera da Implementação PDP.">
+<meta name="twitter:image" content="https://links.rodrigorosar.com.br/images/rodrigo.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="images/rodrigo.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="images/sphere.webp" type="image/webp">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --c-black: #1E1E1E;
+  --c-graphite: #3D3D3A;
+  --c-gray-700: #5F5E5A;
+  --c-gray-500: #888780;
+  --c-gray-300: #B4B2A9;
+  --c-gray-100: #D3D1C7;
+  --c-offwhite: #F5F4F0;
+  --c-white: #FFFFFF;
+  --c-teal: #0F766E;
+  --c-teal-bright: #2DD4BF;
+  --c-dark-bg: #0A0A0B;
+  --c-danger: #DC2626;
+  --c-danger-soft: #F87171;
+
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+
+  --s-1: .5rem;
+  --s-2: 1rem;
+  --s-3: 1.5rem;
+  --s-4: 2rem;
+  --s-6: 3rem;
+
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 18px;
+  --r-pill: 999px;
+
+  --t-fast: 150ms ease;
+  --t-base: 220ms ease;
+  --t-slow: 320ms ease;
+
+  --shadow-soft: 0 2px 8px rgba(30,30,30,.04), 0 8px 24px rgba(30,30,30,.06);
+  --shadow-priority: 0 10px 30px rgba(10,10,11,.2), 0 30px 80px -20px rgba(15,118,110,.25);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { min-height: 100%; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  color: var(--c-black);
+  background: var(--c-offwhite);
+  line-height: 1.6;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(1.5rem, 6vw, 3rem) 1.25rem 4rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, var(--c-gray-300) 1px, transparent 0);
+  background-size: 28px 28px;
+  opacity: .28;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.shell {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s-4);
+}
+
+/* ---------- Header ---------- */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s-2);
+  text-align: center;
+}
+
+.avatar {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--c-gray-100);
+  border: 1px solid var(--c-gray-300);
+  box-shadow: var(--shadow-soft);
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.name {
+  font-size: 1.375rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--c-black);
+  margin-top: var(--s-1);
+}
+
+.handle {
+  font-size: .72rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--c-gray-700);
+  font-weight: 500;
+}
+
+/* ---------- Links stack ---------- */
+.links {
+  width: 100%;
+  display: grid;
+  gap: var(--s-2);
+}
+
+.link-card {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-2);
+  width: 100%;
+  padding: 16px;
+  background: var(--c-white);
+  border: 1px solid var(--c-gray-100);
+  border-radius: var(--r-md);
+  color: var(--c-black);
+  text-decoration: none;
+  transition: transform var(--t-base), border-color var(--t-base), box-shadow var(--t-base);
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(30,30,30,.03);
+}
+
+.link-card:hover {
+  border-color: var(--c-black);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+}
+
+.link-card:active { transform: translateY(0); }
+
+.link-card:focus-visible {
+  outline: 2px solid var(--c-black);
+  outline-offset: 3px;
+}
+
+.thumb {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--r-sm);
+  background: var(--c-black);
+  color: var(--c-offwhite);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: 2px;
+}
+
+.thumb svg { width: 22px; height: 22px; }
+
+.thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,.08) 1px, transparent 0);
+  background-size: 8px 8px;
+  pointer-events: none;
+}
+
+.thumb--img {
+  background: var(--c-offwhite);
+  border: 1px solid var(--c-gray-100);
+  padding: 0;
+}
+
+.thumb--img::after { display: none; }
+
+.thumb--img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.link-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.link-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--c-gray-700);
+}
+
+.link-title {
+  font-size: .95rem;
+  font-weight: 600;
+  color: var(--c-black);
+  line-height: 1.3;
+  letter-spacing: -0.005em;
+}
+
+.link-desc {
+  font-size: .82rem;
+  color: var(--c-gray-700);
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 2px;
+}
+
+.link-arrow {
+  position: absolute;
+  top: 18px;
+  right: 16px;
+  width: 18px;
+  height: 18px;
+  color: var(--c-gray-500);
+  transition: transform var(--t-base), color var(--t-base);
+}
+
+.link-card:hover .link-arrow {
+  color: var(--c-black);
+  transform: translateX(3px);
+}
+
+/* ---------- Priority (Workshop) ---------- */
+.priority {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+  background: var(--c-dark-bg);
+  border-color: transparent;
+  color: var(--c-offwhite);
+  box-shadow: var(--shadow-priority);
+}
+
+.priority:hover {
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(10,10,11,.28), 0 40px 100px -20px rgba(15,118,110,.35);
+}
+
+.priority:focus-visible {
+  outline-color: var(--c-teal-bright);
+}
+
+.priority-banner {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background: var(--c-dark-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 14px 16px 0;
+}
+
+.priority-banner-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: .85;
+  pointer-events: none;
+}
+
+.priority-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center, rgba(10,10,11,.25) 0%, rgba(10,10,11,.65) 70%, rgba(10,10,11,.92) 100%);
+  pointer-events: none;
+}
+
+.priority-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,.045) 1px, transparent 0);
+  background-size: 22px 22px;
+  pointer-events: none;
+}
+
+.banner-top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.badge-live {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--c-offwhite);
+  padding: 5px 10px;
+  border: 1px solid rgba(245,244,240,.28);
+  border-radius: var(--r-pill);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(10,10,11,.45);
+  backdrop-filter: blur(10px) saturate(140%);
+  -webkit-backdrop-filter: blur(10px) saturate(140%);
+}
+
+.badge-live::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c-teal-bright);
+  box-shadow: 0 0 8px rgba(45,212,191,.8);
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
+.banner-date {
+  text-align: right;
+  color: rgba(245,244,240,.55);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.banner-date strong {
+  display: block;
+  color: var(--c-offwhite);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: .12em;
+}
+
+.banner-logo {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex: 1;
+  padding-bottom: 18px;
+}
+
+.banner-logo img {
+  height: 40px;
+  width: auto;
+  filter: drop-shadow(0 4px 20px rgba(0,0,0,.45));
+}
+
+.priority-content {
+  padding: 18px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.priority-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--c-teal-bright);
+}
+
+.priority-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.28;
+  color: var(--c-offwhite);
+}
+
+.priority-subtitle {
+  font-size: .82rem;
+  color: rgba(245,244,240,.62);
+  font-weight: 400;
+  line-height: 1.55;
+  margin-top: 2px;
+}
+
+.priority-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(245,244,240,.1);
+}
+
+.priority-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--c-white);
+  color: var(--c-dark-bg);
+  border-radius: var(--r-pill);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  box-shadow: 0 8px 24px -8px rgba(255,255,255,.25);
+  transition: transform var(--t-base);
+}
+
+.priority-cta svg {
+  width: 14px;
+  height: 14px;
+  transition: transform var(--t-base);
+}
+
+.priority:hover .priority-cta {
+  transform: translateX(0);
+}
+
+.priority:hover .priority-cta svg { transform: translateX(3px); }
+
+.scarcity {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.scarcity-bar {
+  width: 100%;
+  height: 3px;
+  border-radius: var(--r-pill);
+  background: rgba(245,244,240,.12);
+  overflow: hidden;
+}
+
+.scarcity-bar-fill {
+  height: 100%;
+  width: 92%;
+  background: var(--c-danger);
+  border-radius: var(--r-pill) 0 0 var(--r-pill);
+  box-shadow: 0 0 10px rgba(239,68,68,.5);
+}
+
+.scarcity-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .06em;
+  color: var(--c-danger-soft);
+}
+
+/* ---------- Secondary cards ---------- */
+.link-card.waitlist,
+.link-card.youtube {
+  padding-right: 44px;
+}
+
+.link-card.waitlist {
+  cursor: default;
+  background: color-mix(in srgb, var(--c-white) 70%, var(--c-offwhite));
+  border-style: dashed;
+  border-color: var(--c-gray-300);
+  box-shadow: none;
+}
+
+.link-card.waitlist:hover {
+  transform: none;
+  border-color: var(--c-gray-300);
+  box-shadow: none;
+}
+
+.link-card.waitlist .thumb {
+  background: var(--c-gray-100);
+  color: var(--c-gray-700);
+}
+
+.link-card.waitlist .thumb::after { display: none; }
+
+.link-card.waitlist .link-title {
+  color: var(--c-graphite);
+}
+
+.badge-soon {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  padding: 4px 9px;
+  border-radius: var(--r-pill);
+  background: var(--c-black);
+  color: var(--c-offwhite);
+}
+
+.link-card.youtube .thumb {
+  background: #0A0A0B;
+  color: #FF0033;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  margin-top: var(--s-4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s-2);
+  text-align: center;
+  color: var(--c-gray-700);
+  font-size: 12px;
+}
+
+.footer-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--c-graphite);
+  text-decoration: none;
+  padding: 8px 14px;
+  border: 1px solid var(--c-gray-300);
+  border-radius: var(--r-pill);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .06em;
+  transition: border-color var(--t-base), color var(--t-base), background var(--t-base);
+  background: var(--c-white);
+}
+
+.footer-social:hover {
+  border-color: var(--c-black);
+  color: var(--c-black);
+}
+
+.footer-social:focus-visible {
+  outline: 2px solid var(--c-black);
+  outline-offset: 3px;
+}
+
+.footer-social svg { width: 14px; height: 14px; }
+
+.footer-copy {
+  font-size: 10px;
+  letter-spacing: .1em;
+  color: var(--c-gray-500);
+  text-transform: uppercase;
+}
+
+/* ---------- Animations ---------- */
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .45; transform: scale(.85); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .shell > * { animation: reveal 520ms var(--t-slow) both; }
+  .header { animation-delay: 0ms; }
+  .links  { animation-delay: 80ms; }
+  .footer { animation-delay: 160ms; }
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+  .badge-live::before { animation: none; }
+  .priority-banner-video { display: none; }
+}
+
+@media (prefers-reduced-data: reduce) {
+  .priority-banner-video { display: none; }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 420px) {
+  body { padding: 1.25rem 1rem 3rem; }
+  .priority-banner { height: 160px; }
+  .banner-logo img { height: 34px; }
+  .priority-title { font-size: 1rem; }
+  .priority-subtitle { font-size: .78rem; }
+  .avatar { width: 96px; height: 96px; }
+  .name { font-size: 1.25rem; }
+}
+
+@media (max-width: 360px) {
+  .priority-cta-row { flex-direction: column; align-items: stretch; gap: 10px; }
+  .priority-cta { justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<main class="shell" role="main">
+
+  <header class="header">
+    <div class="avatar">
+      <img src="images/rodrigo.jpg" alt="Rodrigo Rosar" width="112" height="112" loading="eager" decoding="async" fetchpriority="high">
+    </div>
+    <h1 class="name">Rodrigo Rosar</h1>
+    <span class="handle">@rodrigorosar</span>
+  </header>
+
+  <nav class="links" aria-label="Links principais">
+
+    <a href="https://workshop.rodrigorosar.com.br/wpdp06-v1/?utm_source=direto&amp;xcod=1765281411387_17652808380376&amp;sck=direto"
+       class="link-card priority"
+       target="_blank"
+       rel="noopener"
+       aria-label="Workshop PDP + IA — garantir vaga">
+      <div class="priority-banner" aria-hidden="true">
+        <video class="priority-banner-video"
+               autoplay muted loop playsinline
+               webkit-playsinline="true"
+               preload="metadata"
+               poster="images/sphere.webp"
+               disablepictureinpicture
+               disableremoteplayback>
+          <source src="images/sphere.mp4" type="video/mp4">
+        </video>
+        <div class="banner-top">
+          <span class="badge-live">Ao vivo · 6ª turma</span>
+          <span class="banner-date">
+            <strong>16 · 17 maio</strong>
+            Zoom · 2 dias
+          </span>
+        </div>
+        <div class="banner-logo">
+          <img src="images/logo-workshop.webp" alt="" width="180" height="40" loading="eager" decoding="async">
+        </div>
+      </div>
+      <div class="priority-content">
+        <span class="priority-label">Workshop PDP + IA</span>
+        <h2 class="priority-title">Dois dias para transformar seu processo de projeto em uma máquina de aprovações de primeira, acelerada com IA.</h2>
+        <div class="priority-cta-row">
+          <span class="priority-cta">
+            Garantir minha vaga
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </span>
+          <div class="scarcity">
+            <div class="scarcity-bar" role="progressbar" aria-label="Lote promocional — últimas vagas" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
+              <div class="scarcity-bar-fill"></div>
+            </div>
+            <span class="scarcity-label">Últimas vagas do lote promo</span>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <div class="link-card waitlist"
+         role="group"
+         aria-label="Lista de espera da Implementação PDP"
+         aria-disabled="true">
+      <div class="thumb thumb--img" aria-hidden="true">
+        <img src="images/implementacao.png" alt="" width="88" height="88" loading="lazy" decoding="async">
+      </div>
+      <div class="link-body">
+        <span class="link-label">Lista de espera</span>
+        <span class="link-title">Implementação PDP</span>
+        <p class="link-desc">Próxima turma em breve. Entre na lista e seja avisado em primeira mão quando as vagas abrirem.</p>
+      </div>
+    </div>
+
+    <a href="https://www.youtube.com/@RodrigoRosar/videos"
+       class="link-card youtube"
+       target="_blank"
+       rel="noopener"
+       aria-label="Canal Projeto Invisível no YouTube">
+      <div class="thumb" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
+          <path d="M23 12s0-3.8-.5-5.6c-.2-.9-1-1.6-1.9-1.9C18.7 4 12 4 12 4s-6.7 0-8.6.5c-.9.2-1.6 1-1.9 1.9C1 8.2 1 12 1 12s0 3.8.5 5.6c.2.9 1 1.6 1.9 1.9C5.3 20 12 20 12 20s6.7 0 8.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.6.5-5.6zM9.8 15.4V8.6l5.7 3.4-5.7 3.4z"></path>
+        </svg>
+      </div>
+      <div class="link-body">
+        <span class="link-label">YouTube</span>
+        <span class="link-title">Conheça o Projeto Invisível</span>
+        <p class="link-desc">Meu canal no YouTube. Processo, organização e IA aplicada ao escritório de interiores.</p>
+      </div>
+      <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </a>
+
+  </nav>
+
+  <footer class="footer">
+    <a class="footer-social"
+       href="https://instagram.com/rodrigorosar"
+       target="_blank"
+       rel="noopener"
+       aria-label="Instagram @rodrigorosar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+      </svg>
+      @rodrigorosar
+    </a>
+    <span class="footer-copy">© Rodrigo Rosar</span>
+  </footer>
+
+</main>
+
+</body>
+</html>
