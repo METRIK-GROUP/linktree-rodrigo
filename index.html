@@ -520,6 +520,11 @@ body::before {
   color: var(--c-danger-soft);
 }
 
+.scarcity-label.presale {
+  color: var(--c-teal-bright);
+  font-weight: 600;
+}
+
 /* ---------- Secondary cards ---------- */
 .link-card.waitlist,
 .link-card.ia,
@@ -727,14 +732,22 @@ body::before {
         <span class="priority-label">Workshop PDP + IA</span>
         <h2 class="priority-title">Dois dias para transformar seu processo de projeto em uma máquina de aprovações de primeira acelerada com IA.</h2>
         <div class="priority-cta-row">
-          <span class="priority-cta">
+          <!-- Pré-venda: visível até 06/07/2026 -->
+          <span class="priority-cta" data-ws="presale">
+            Vendas abrem 6 de julho
+          </span>
+          <div class="scarcity" data-ws="presale">
+            <span class="scarcity-label presale" id="ws-countdown">Inscrições em breve</span>
+          </div>
+          <!-- Venda: ativa automaticamente a partir de 06/07/2026 -->
+          <span class="priority-cta" data-ws="sale" style="display:none">
             Garantir minha vaga
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
           </span>
-          <div class="scarcity">
+          <div class="scarcity" data-ws="sale" style="display:none">
             <div class="scarcity-bar" role="progressbar" aria-label="Lote promocional — últimas vagas" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
               <div class="scarcity-bar-fill"></div>
             </div>
@@ -801,6 +814,31 @@ body::before {
   </footer>
 
 </main>
+
+<script>
+(function(){
+  // Abertura das vendas: 6 de julho de 2026, 00:00 (horário de Brasília).
+  // Para mudar a hora/data, edite a linha abaixo.
+  var OPEN = Date.parse('2026-07-06T00:00:00-03:00');
+  function pad(n){ return (n<10?'0':'')+n; }
+  function render(){
+    var now = Date.now();
+    var open = now >= OPEN;
+    document.querySelectorAll('[data-ws="presale"]').forEach(function(el){ el.style.display = open ? 'none' : ''; });
+    document.querySelectorAll('[data-ws="sale"]').forEach(function(el){ el.style.display = open ? '' : 'none'; });
+    if(!open){
+      var diff = OPEN - now;
+      var d = Math.floor(diff/86400000);
+      var h = Math.floor((diff%86400000)/3600000);
+      var m = Math.floor((diff%3600000)/60000);
+      var cd = document.getElementById('ws-countdown');
+      if(cd){ cd.textContent = d>0 ? ('Abrem em ' + d + 'd ' + pad(h) + 'h') : ('Abrem em ' + pad(h) + 'h ' + pad(m) + 'min'); }
+    }
+  }
+  render();
+  setInterval(render, 60000);
+})();
+</script>
 
 </body>
 </html>
