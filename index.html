@@ -526,11 +526,25 @@ body::before {
 }
 
 /* ---------- Secondary cards ---------- */
-.link-card.waitlist,
-.link-card.ia,
-.link-card.impl {
-  padding-right: 44px;
+.link-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: .005em;
+  color: var(--c-teal);
 }
+
+.link-cta svg {
+  width: 15px;
+  height: 15px;
+  transition: transform var(--t-base);
+}
+
+.link-card:hover .link-cta { color: var(--c-black); }
+.link-card:hover .link-cta svg { transform: translateX(4px); }
 
 .link-card.waitlist {
   cursor: default;
@@ -734,10 +748,14 @@ body::before {
         <div class="priority-cta-row">
           <!-- Pré-venda: visível até 06/07/2026 -->
           <span class="priority-cta" data-ws="presale">
-            Vendas abrem 6 de julho
+            Conheça o workshop
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
           </span>
           <div class="scarcity" data-ws="presale">
-            <span class="scarcity-label presale" id="ws-countdown">Inscrições em breve</span>
+            <span class="scarcity-label presale">Vendas abrem 6 de julho</span>
           </div>
           <!-- Venda: ativa automaticamente a partir de 06/07/2026 -->
           <span class="priority-cta" data-ws="sale" style="display:none">
@@ -769,11 +787,10 @@ body::before {
         <span class="link-label">IA de Primeira</span>
         <span class="link-title">O escritório que você sempre quis, agora com IA</span>
         <p class="link-desc">Inteligência artificial como alavanca de lucro, crescimento e produtividade em todas as áreas do escritório.</p>
+        <span class="link-cta">Entrar na lista de espera
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </span>
       </div>
-      <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <line x1="5" y1="12" x2="19" y2="12"></line>
-        <polyline points="12 5 19 12 12 19"></polyline>
-      </svg>
     </a>
 
     <a href="https://implementacao.rodrigorosar.com.br/lista-de-espera"
@@ -788,11 +805,10 @@ body::before {
         <span class="link-label">Implementação PDP</span>
         <span class="link-title">Do caos à ordem no seu escritório em 6 semanas</span>
         <p class="link-desc">Controle do seu tempo, processo de projeto profissional e IA aplicada, com acompanhamento semanal.</p>
+        <span class="link-cta">Entrar na lista de espera
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </span>
       </div>
-      <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <line x1="5" y1="12" x2="19" y2="12"></line>
-        <polyline points="12 5 19 12 12 19"></polyline>
-      </svg>
     </a>
 
   </nav>
@@ -818,25 +834,12 @@ body::before {
 <script>
 (function(){
   // Abertura das vendas: 6 de julho de 2026, 00:00 (horário de Brasília).
+  // A partir desse momento o card troca sozinho para "Garantir minha vaga".
   // Para mudar a hora/data, edite a linha abaixo.
   var OPEN = Date.parse('2026-07-06T00:00:00-03:00');
-  function pad(n){ return (n<10?'0':'')+n; }
-  function render(){
-    var now = Date.now();
-    var open = now >= OPEN;
-    document.querySelectorAll('[data-ws="presale"]').forEach(function(el){ el.style.display = open ? 'none' : ''; });
-    document.querySelectorAll('[data-ws="sale"]').forEach(function(el){ el.style.display = open ? '' : 'none'; });
-    if(!open){
-      var diff = OPEN - now;
-      var d = Math.floor(diff/86400000);
-      var h = Math.floor((diff%86400000)/3600000);
-      var m = Math.floor((diff%3600000)/60000);
-      var cd = document.getElementById('ws-countdown');
-      if(cd){ cd.textContent = d>0 ? ('Abrem em ' + d + 'd ' + pad(h) + 'h') : ('Abrem em ' + pad(h) + 'h ' + pad(m) + 'min'); }
-    }
-  }
-  render();
-  setInterval(render, 60000);
+  var open = Date.now() >= OPEN;
+  document.querySelectorAll('[data-ws="presale"]').forEach(function(el){ el.style.display = open ? 'none' : ''; });
+  document.querySelectorAll('[data-ws="sale"]').forEach(function(el){ el.style.display = open ? '' : 'none'; });
 })();
 </script>
 
