@@ -571,6 +571,20 @@ body::before {
   color: var(--c-teal-bright);
 }
 
+.thumb--logo {
+  background: var(--c-dark-bg);
+  padding: 7px;
+}
+
+.thumb--logo::after { display: none; }
+
+.thumb--logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
 /* ---------- Footer ---------- */
 .footer {
   margin-top: var(--s-4);
@@ -735,13 +749,8 @@ body::before {
        target="_blank"
        rel="noopener"
        aria-label="IA de Primeira — entrar na lista de espera">
-      <div class="thumb" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="m12 3-1.9 5.8a2 2 0 0 1-1.287 1.288L3 12l5.8 1.9a2 2 0 0 1 1.288 1.287L12 21l1.9-5.8a2 2 0 0 1 1.287-1.288L21 12l-5.8-1.9a2 2 0 0 1-1.288-1.287Z"></path>
-          <path d="M5 3v4"></path>
-          <path d="M17 19v2"></path>
-          <path d="M3 17h4"></path>
-        </svg>
+      <div class="thumb thumb--logo" aria-hidden="true">
+        <img src="images/ia-de-primeira.png" alt="" width="44" height="44" loading="lazy" decoding="async">
       </div>
       <div class="link-body">
         <span class="link-label">IA de Primeira</span>
