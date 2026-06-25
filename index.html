@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#F5F4F0" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0A0A0B" media="(prefers-color-scheme: dark)">
 <meta name="color-scheme" content="light dark">
-<meta name="description" content="Rodrigo Rosar — Workshop PDP+IA, Projeto Invisível no YouTube e lista de espera da Implementação PDP.">
+<meta name="description" content="Rodrigo Rosar — Workshop PDP+IA, lista de espera do IA de Primeira e da Implementação PDP.">
 <meta name="robots" content="index,follow">
 
 <title>Rodrigo Rosar · Links</title>
@@ -18,13 +18,13 @@
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Rodrigo Rosar">
 <meta property="og:title" content="Rodrigo Rosar · Links">
-<meta property="og:description" content="Workshop PDP+IA, Projeto Invisível no YouTube e lista de espera da Implementação PDP.">
+<meta property="og:description" content="Workshop PDP+IA, lista de espera do IA de Primeira e da Implementação PDP.">
 <meta property="og:url" content="https://links.rodrigorosar.com.br/">
 <meta property="og:image" content="https://links.rodrigorosar.com.br/images/rodrigo.jpg">
 <meta property="og:image:alt" content="Rodrigo Rosar">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Rodrigo Rosar · Links">
-<meta name="twitter:description" content="Workshop PDP+IA, Projeto Invisível no YouTube e lista de espera da Implementação PDP.">
+<meta name="twitter:description" content="Workshop PDP+IA, lista de espera do IA de Primeira e da Implementação PDP.">
 <meta name="twitter:image" content="https://links.rodrigorosar.com.br/images/rodrigo.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -522,7 +522,8 @@ body::before {
 
 /* ---------- Secondary cards ---------- */
 .link-card.waitlist,
-.link-card.youtube {
+.link-card.ia,
+.link-card.impl {
   padding-right: 44px;
 }
 
@@ -565,9 +566,9 @@ body::before {
   color: var(--c-offwhite);
 }
 
-.link-card.youtube .thumb {
-  background: #0A0A0B;
-  color: #FF0033;
+.link-card.ia .thumb {
+  background: var(--c-dark-bg);
+  color: var(--c-teal-bright);
 }
 
 /* ---------- Footer ---------- */
@@ -682,7 +683,7 @@ body::before {
 
   <nav class="links" aria-label="Links principais">
 
-    <a href="https://workshop.rodrigorosar.com.br/wpdp06-v1/?utm_source=direto&amp;xcod=1765281411387_17652808380376&amp;sck=direto"
+    <a href="https://workshop.rodrigorosar.com.br/wpdp07/?utm_source=direto&amp;xcod=1765281411387_17652808380376&amp;sck=direto"
        class="link-card priority"
        target="_blank"
        rel="noopener"
@@ -698,9 +699,9 @@ body::before {
           <source src="images/sphere.mp4" type="video/mp4">
         </video>
         <div class="banner-top">
-          <span class="badge-live">Ao vivo · 6ª turma</span>
+          <span class="badge-live">Ao vivo · 7ª edição</span>
           <span class="banner-date">
-            <strong>16 · 17 maio</strong>
+            <strong>25 · 26 julho</strong>
             Zoom · 2 dias
           </span>
         </div>
@@ -729,34 +730,42 @@ body::before {
       </div>
     </a>
 
-    <div class="link-card waitlist"
-         role="group"
-         aria-label="Lista de espera da Implementação PDP"
-         aria-disabled="true">
+    <a href="https://iadeprimeira.rodrigorosar.com.br/"
+       class="link-card ia"
+       target="_blank"
+       rel="noopener"
+       aria-label="IA de Primeira — entrar na lista de espera">
+      <div class="thumb" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m12 3-1.9 5.8a2 2 0 0 1-1.287 1.288L3 12l5.8 1.9a2 2 0 0 1 1.288 1.287L12 21l1.9-5.8a2 2 0 0 1 1.287-1.288L21 12l-5.8-1.9a2 2 0 0 1-1.288-1.287Z"></path>
+          <path d="M5 3v4"></path>
+          <path d="M17 19v2"></path>
+          <path d="M3 17h4"></path>
+        </svg>
+      </div>
+      <div class="link-body">
+        <span class="link-label">IA de Primeira</span>
+        <span class="link-title">O escritório que você sempre quis, agora com IA</span>
+        <p class="link-desc">Inteligência artificial como alavanca de lucro, crescimento e produtividade em todas as áreas do escritório.</p>
+      </div>
+      <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </a>
+
+    <a href="https://implementacao.rodrigorosar.com.br/"
+       class="link-card impl"
+       target="_blank"
+       rel="noopener"
+       aria-label="Implementação PDP — lista de espera">
       <div class="thumb thumb--img" aria-hidden="true">
         <img src="images/implementacao.png" alt="" width="88" height="88" loading="lazy" decoding="async">
       </div>
       <div class="link-body">
-        <span class="link-label">Lista de espera</span>
-        <span class="link-title">Implementação PDP</span>
-        <p class="link-desc">Próxima turma em breve. Entre na lista e seja avisado em primeira mão quando as vagas abrirem.</p>
-      </div>
-    </div>
-
-    <a href="https://www.youtube.com/@RodrigoRosar/videos"
-       class="link-card youtube"
-       target="_blank"
-       rel="noopener"
-       aria-label="Canal Projeto Invisível no YouTube">
-      <div class="thumb" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
-          <path d="M23 12s0-3.8-.5-5.6c-.2-.9-1-1.6-1.9-1.9C18.7 4 12 4 12 4s-6.7 0-8.6.5c-.9.2-1.6 1-1.9 1.9C1 8.2 1 12 1 12s0 3.8.5 5.6c.2.9 1 1.6 1.9 1.9C5.3 20 12 20 12 20s6.7 0 8.6-.5c.9-.2 1.6-1 1.9-1.9.5-1.8.5-5.6.5-5.6zM9.8 15.4V8.6l5.7 3.4-5.7 3.4z"></path>
-        </svg>
-      </div>
-      <div class="link-body">
-        <span class="link-label">YouTube</span>
-        <span class="link-title">Conheça o Projeto Invisível</span>
-        <p class="link-desc">Meu canal no YouTube. Processo, organização e IA aplicada ao escritório de interiores.</p>
+        <span class="link-label">Implementação PDP</span>
+        <span class="link-title">Do caos à ordem no seu escritório em 6 semanas</span>
+        <p class="link-desc">Controle do seu tempo, processo de projeto profissional e IA aplicada, com acompanhamento semanal.</p>
       </div>
       <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <line x1="5" y1="12" x2="19" y2="12"></line>
