@@ -546,6 +546,41 @@ body::before {
 .link-card:hover .link-cta { color: var(--c-black); }
 .link-card:hover .link-cta svg { transform: translateX(4px); }
 
+/* CTA + preview de data lado a lado */
+.link-cta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin-top: 12px;
+}
+
+.link-cta-row .link-cta { margin-top: 0; }
+
+.link-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .015em;
+  color: var(--c-gray-700);
+  background: var(--c-offwhite);
+  border: 1px solid var(--c-gray-100);
+  padding: 4px 9px 4px 8px;
+  border-radius: var(--r-pill);
+  white-space: nowrap;
+}
+
+.link-date svg {
+  width: 12px;
+  height: 12px;
+  color: var(--c-teal);
+  flex-shrink: 0;
+}
+
 .link-card.waitlist {
   cursor: default;
   background: color-mix(in srgb, var(--c-white) 70%, var(--c-offwhite));
@@ -784,12 +819,18 @@ body::before {
         <img src="images/ia-de-primeira.png" alt="" width="44" height="44" loading="lazy" decoding="async">
       </div>
       <div class="link-body">
-        <span class="link-label">IA de Primeira</span>
+        <span class="link-label">Curso online · IA de Primeira</span>
         <span class="link-title">O escritório que você sempre quis, agora com IA</span>
         <p class="link-desc">Inteligência artificial como alavanca de lucro, crescimento e produtividade em todas as áreas do escritório.</p>
-        <span class="link-cta">Entrar na lista de espera
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-        </span>
+        <div class="link-cta-row">
+          <span class="link-cta">Entrar na lista de espera
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </span>
+          <span class="link-date">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            Vagas abrem 27 jul
+          </span>
+        </div>
       </div>
     </a>
 
@@ -802,12 +843,18 @@ body::before {
         <img src="images/implementacao-icon.png" alt="" width="88" height="88" loading="lazy" decoding="async">
       </div>
       <div class="link-body">
-        <span class="link-label">Implementação PDP</span>
+        <span class="link-label">Implementação · Projeto de Primeira + IA</span>
         <span class="link-title">Do caos à ordem no seu escritório em 6 semanas</span>
         <p class="link-desc">Controle do seu tempo, processo de projeto profissional e IA aplicada, com acompanhamento semanal.</p>
-        <span class="link-cta">Entrar na lista de espera
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-        </span>
+        <div class="link-cta-row">
+          <span class="link-cta">Entrar na lista de espera
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </span>
+          <span class="link-date">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            Vagas abrem 27 jul
+          </span>
+        </div>
       </div>
     </a>
 
