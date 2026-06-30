@@ -520,11 +520,6 @@ body::before {
   color: var(--c-danger-soft);
 }
 
-.scarcity-label.presale {
-  color: var(--c-teal-bright);
-  font-weight: 600;
-}
-
 /* ---------- Secondary cards ---------- */
 .link-cta {
   display: inline-flex;
@@ -781,26 +776,14 @@ body::before {
         <span class="priority-label">Workshop PDP + IA</span>
         <h2 class="priority-title">Dois dias para transformar seu processo de projeto em uma máquina de aprovações de primeira acelerada com IA.</h2>
         <div class="priority-cta-row">
-          <!-- Pré-venda: visível até 06/07/2026 -->
-          <span class="priority-cta" data-ws="presale">
-            Conheça o workshop
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </span>
-          <div class="scarcity" data-ws="presale">
-            <span class="scarcity-label presale">Vendas abrem 6 de julho</span>
-          </div>
-          <!-- Venda: ativa automaticamente a partir de 06/07/2026 -->
-          <span class="priority-cta" data-ws="sale" style="display:none">
+          <span class="priority-cta" data-ws="sale">
             Garantir minha vaga
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
           </span>
-          <div class="scarcity" data-ws="sale" style="display:none">
+          <div class="scarcity" data-ws="sale">
             <div class="scarcity-bar" role="progressbar" aria-label="Lote promocional — últimas vagas" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
               <div class="scarcity-bar-fill"></div>
             </div>
@@ -878,17 +861,6 @@ body::before {
 
 </main>
 
-<script>
-(function(){
-  // Abertura das vendas: 6 de julho de 2026, 00:00 (horário de Brasília).
-  // A partir desse momento o card troca sozinho para "Garantir minha vaga".
-  // Para mudar a hora/data, edite a linha abaixo.
-  var OPEN = Date.parse('2026-07-06T00:00:00-03:00');
-  var open = Date.now() >= OPEN;
-  document.querySelectorAll('[data-ws="presale"]').forEach(function(el){ el.style.display = open ? 'none' : ''; });
-  document.querySelectorAll('[data-ws="sale"]').forEach(function(el){ el.style.display = open ? '' : 'none'; });
-})();
-</script>
 
 </body>
 </html>
