@@ -30,7 +30,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="images/rodrigo.jpg" fetchpriority="high">
-<link rel="preload" as="image" href="images/sphere.webp" type="image/webp">
+<link rel="preload" as="image" href="images/implementacao-hero.webp" type="image/webp">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -422,13 +422,6 @@ body::before {
   filter: drop-shadow(0 4px 20px rgba(0,0,0,.45));
 }
 
-.banner-logo img.banner-logo--impl {
-  height: 96px;
-  width: 96px;
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0,0,0,.5);
-}
-
 .priority-content {
   padding: 18px 18px 18px;
   display: flex;
@@ -735,11 +728,6 @@ body::before {
     transition-duration: .01ms !important;
   }
   .badge-live::before { animation: none; }
-  .priority-banner-video { display: none; }
-}
-
-@media (prefers-reduced-data: reduce) {
-  .priority-banner-video { display: none; }
 }
 
 /* ---------- Responsive ---------- */
@@ -747,7 +735,6 @@ body::before {
   body { padding: 1.25rem 1rem 3rem; }
   .priority-banner { height: 160px; }
   .banner-logo img { height: 34px; }
-  .banner-logo img.banner-logo--impl { height: 84px; width: 84px; }
   .priority-title { font-size: 1rem; }
   .priority-subtitle { font-size: .78rem; }
   .avatar { width: 72px; height: 72px; }
@@ -782,15 +769,7 @@ body::before {
        rel="noopener"
        aria-label="Implementação Projeto de Primeira + IA — garantir vaga">
       <div class="priority-banner" aria-hidden="true">
-        <video class="priority-banner-video"
-               autoplay muted loop playsinline
-               webkit-playsinline="true"
-               preload="metadata"
-               poster="images/sphere.webp"
-               disablepictureinpicture
-               disableremoteplayback>
-          <source src="images/sphere.mp4" type="video/mp4">
-        </video>
+        <img class="priority-banner-video" src="images/implementacao-hero.webp" alt="" width="1378" height="766" loading="eager" decoding="async" fetchpriority="high">
         <div class="banner-top">
           <span class="badge-live">Vagas abertas</span>
           <span class="banner-date">
@@ -799,7 +778,7 @@ body::before {
           </span>
         </div>
         <div class="banner-logo">
-          <img class="banner-logo--impl" src="images/implementacao.png" alt="" width="96" height="96" loading="eager" decoding="async">
+          <img src="images/logo-implementacao.webp" alt="" width="240" height="40" loading="eager" decoding="async">
         </div>
       </div>
       <div class="priority-content">
