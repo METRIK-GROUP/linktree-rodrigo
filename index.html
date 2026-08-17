@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#F5F4F0" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0A0A0B" media="(prefers-color-scheme: dark)">
 <meta name="color-scheme" content="light dark">
-<meta name="description" content="Rodrigo Rosar — Workshop PDP+IA, lista de espera do IA de Primeira e da Implementação PDP.">
+<meta name="description" content="Rodrigo Rosar: Implementação Projeto de Primeira + IA com vagas abertas, e lista de espera do IA de Primeira.">
 <meta name="robots" content="index,follow">
 
 <title>Rodrigo Rosar · Links</title>
@@ -18,13 +18,13 @@
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Rodrigo Rosar">
 <meta property="og:title" content="Rodrigo Rosar · Links">
-<meta property="og:description" content="Workshop PDP+IA, lista de espera do IA de Primeira e da Implementação PDP.">
+<meta property="og:description" content="Implementação Projeto de Primeira + IA com vagas abertas, e lista de espera do IA de Primeira.">
 <meta property="og:url" content="https://links.rodrigorosar.com.br/">
 <meta property="og:image" content="https://links.rodrigorosar.com.br/images/rodrigo.jpg">
 <meta property="og:image:alt" content="Rodrigo Rosar">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Rodrigo Rosar · Links">
-<meta name="twitter:description" content="Workshop PDP+IA, lista de espera do IA de Primeira e da Implementação PDP.">
+<meta name="twitter:description" content="Implementação Projeto de Primeira + IA com vagas abertas, e lista de espera do IA de Primeira.">
 <meta name="twitter:image" content="https://links.rodrigorosar.com.br/images/rodrigo.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -289,7 +289,7 @@ body::before {
   transform: translateX(3px);
 }
 
-/* ---------- Priority (Workshop) ---------- */
+/* ---------- Priority (Implementação) ---------- */
 .priority {
   display: flex;
   flex-direction: column;
@@ -422,6 +422,13 @@ body::before {
   filter: drop-shadow(0 4px 20px rgba(0,0,0,.45));
 }
 
+.banner-logo img.banner-logo--impl {
+  height: 96px;
+  width: 96px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.5);
+}
+
 .priority-content {
   padding: 18px 18px 18px;
   display: flex;
@@ -507,7 +514,7 @@ body::before {
 
 .scarcity-bar-fill {
   height: 100%;
-  width: 92%;
+  width: 70%;
   background: var(--c-danger);
   border-radius: var(--r-pill) 0 0 var(--r-pill);
   box-shadow: 0 0 10px rgba(239,68,68,.5);
@@ -620,6 +627,28 @@ body::before {
   color: var(--c-teal-bright);
 }
 
+.link-card.closed {
+  cursor: default;
+  background: color-mix(in srgb, var(--c-white) 70%, var(--c-offwhite));
+  border-style: dashed;
+  border-color: var(--c-gray-300);
+  box-shadow: none;
+}
+
+.link-card.closed:hover {
+  transform: none;
+  border-color: var(--c-gray-300);
+  box-shadow: none;
+}
+
+.link-card.closed .link-title { color: var(--c-graphite); }
+.link-card.closed .link-label { color: var(--c-gray-700); }
+.link-card.closed .thumb { opacity: .7; }
+.link-card.closed .badge-soon {
+  background: var(--c-gray-100);
+  color: var(--c-gray-700);
+}
+
 .thumb--logo {
   background: var(--c-dark-bg);
   padding: 7px;
@@ -718,6 +747,7 @@ body::before {
   body { padding: 1.25rem 1rem 3rem; }
   .priority-banner { height: 160px; }
   .banner-logo img { height: 34px; }
+  .banner-logo img.banner-logo--impl { height: 84px; width: 84px; }
   .priority-title { font-size: 1rem; }
   .priority-subtitle { font-size: .78rem; }
   .avatar { width: 72px; height: 72px; }
@@ -746,11 +776,11 @@ body::before {
 
   <nav class="links" aria-label="Links principais">
 
-    <a href="https://workshop.rodrigorosar.com.br/?utm_campaign=wpdp07&amp;utm_source=organico&amp;utm_medium=bio_ig"
+    <a href="https://implementacao.rodrigorosar.com.br/?utm_campaign=implementacao&amp;utm_source=organico&amp;utm_medium=bio_ig"
        class="link-card priority"
        target="_blank"
        rel="noopener"
-       aria-label="Workshop PDP + IA — garantir vaga">
+       aria-label="Implementação Projeto de Primeira + IA — garantir vaga">
       <div class="priority-banner" aria-hidden="true">
         <video class="priority-banner-video"
                autoplay muted loop playsinline
@@ -762,32 +792,32 @@ body::before {
           <source src="images/sphere.mp4" type="video/mp4">
         </video>
         <div class="banner-top">
-          <span class="badge-live">Ao vivo · 7ª edição</span>
+          <span class="badge-live">Vagas abertas</span>
           <span class="banner-date">
-            <strong>15 · 16 agosto</strong>
-            Zoom · 2 dias
+            <strong>6 semanas</strong>
+            Acompanhamento semanal
           </span>
         </div>
         <div class="banner-logo">
-          <img src="images/logo-workshop.webp" alt="" width="180" height="40" loading="eager" decoding="async">
+          <img class="banner-logo--impl" src="images/implementacao.png" alt="" width="96" height="96" loading="eager" decoding="async">
         </div>
       </div>
       <div class="priority-content">
-        <span class="priority-label">Workshop PDP + IA</span>
-        <h2 class="priority-title">Dois dias para transformar seu processo de projeto em uma máquina de aprovações de primeira acelerada com IA.</h2>
+        <span class="priority-label">Implementação Projeto de Primeira + IA</span>
+        <h2 class="priority-title">Do caos à ordem no seu escritório em 6 semanas: tempo, processo de projeto e IA aplicada.</h2>
         <div class="priority-cta-row">
-          <span class="priority-cta" data-ws="sale">
+          <span class="priority-cta">
             Garantir minha vaga
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
           </span>
-          <div class="scarcity" data-ws="sale">
-            <div class="scarcity-bar" role="progressbar" aria-label="Lote promocional — últimas vagas" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
+          <div class="scarcity">
+            <div class="scarcity-bar" role="progressbar" aria-label="Matrículas abertas por tempo limitado" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
               <div class="scarcity-bar-fill"></div>
             </div>
-            <span class="scarcity-label">Últimas vagas do lote promo</span>
+            <span class="scarcity-label">Matrículas encerram nesta semana</span>
           </div>
         </div>
       </div>
@@ -805,41 +835,23 @@ body::before {
         <span class="link-label">Curso online IA de Primeira</span>
         <span class="link-title">O escritório que você sempre quis, agora com IA</span>
         <p class="link-desc">Inteligência artificial como alavanca de lucro, crescimento e produtividade em todas as áreas do escritório.</p>
-        <div class="link-cta-row">
-          <span class="link-cta">Entrar na lista de espera
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </span>
-          <span class="link-date">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-            Vagas abrem 17 ago
-          </span>
-        </div>
+        <span class="link-cta">Entrar na lista de espera
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </span>
       </div>
     </a>
 
-    <a href="https://implementacao.rodrigorosar.com.br/lista-de-espera"
-       class="link-card impl"
-       target="_blank"
-       rel="noopener"
-       aria-label="Implementação PDP — lista de espera">
-      <div class="thumb thumb--img" aria-hidden="true">
-        <img src="images/implementacao-icon.png" alt="" width="88" height="88" loading="lazy" decoding="async">
+    <div class="link-card closed" aria-label="Workshop PDP + IA — edição encerrada">
+      <span class="badge-soon">Encerrado</span>
+      <div class="thumb" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
       </div>
       <div class="link-body">
-        <span class="link-label">Implementação Projeto de Primeira + IA</span>
-        <span class="link-title">Do caos à ordem no seu escritório em 6 semanas</span>
-        <p class="link-desc">Controle do seu tempo, processo de projeto profissional e IA aplicada, com acompanhamento semanal.</p>
-        <div class="link-cta-row">
-          <span class="link-cta">Entrar na lista de espera
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </span>
-          <span class="link-date">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-            Vagas abrem 17 ago
-          </span>
-        </div>
+        <span class="link-label">Workshop PDP + IA</span>
+        <span class="link-title">7ª edição realizada</span>
+        <p class="link-desc">Aconteceu ao vivo em 15 e 16 de agosto. Acompanhe o Instagram para saber da próxima edição.</p>
       </div>
-    </a>
+    </div>
 
   </nav>
 
